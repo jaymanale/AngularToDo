@@ -1,0 +1,23 @@
+<div class="container text-center py-5">
+
+  <p class="font-weight-normal display-1 ">ToDO App</p>
+
+
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Enter Task..." [(ngModel)]="taskName">
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="button" (click)="addToDoTask(taskName)">Love it</button>
+    </div>
+  </div>
+
+</div>
+<div class="container">
+  <ul>
+
+    <li *ngFor="let task of userToDOTaskObj">{{task.taskName}}
+      <button class="btn-info" (click)="editToDoTask(task)">Edit</button>
+      <button class="btn-danger">Delete</button>
+    </li>
+
+  </ul>
+</div>
